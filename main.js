@@ -7,7 +7,13 @@ const map = new maplibregl.Map({
     container: 'map', // container id
     style: './assets/style.json', // style URL
     center: [5.66509, 51.96857], // starting position [lng, lat]
-    zoom: 13 // starting zoom
+    zoom: 13, // starting zoom
+    maxBounds: [
+        [51.9364055, 5.6058239],
+        [52.0007083, 5.7243627]
+    ],
+    minZoom: 11,
+    maxZoom: 16,
 });
 
 map.on('load', () => {
